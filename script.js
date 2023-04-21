@@ -21,9 +21,10 @@ function getComputerChoice()    {
         
 
 function playRound(playerSelection, computerSelection) {
-        
          
-
+        playerSelection = prompt("Choose your weapon: Rock, Paper or Scissors!", '').toLowerCase();
+        computerSelection = getComputerChoice();
+        ssss
     if    (playerSelection == computerSelection)
             roundResult = 'It\'s a Draw!';
             
@@ -59,6 +60,7 @@ function playRound(playerSelection, computerSelection) {
             
     }
     return roundResult;
+    
        
    
     
@@ -98,12 +100,12 @@ function playRound(playerSelection, computerSelection) {
 
  }
 
-        const playerSelection = prompt("Choose your weapon: Rock, Paper or Scissors!", '').toLowerCase();
-        const computerSelection = getComputerChoice();  
+ const playerSelection = prompt("Choose your weapon: Rock, Paper or Scissors!", '').toLowerCase();
+ const computerSelection = getComputerChoice();   
         let playerScore = parseInt(0);
         let computerScore = parseInt(0);
 
-
+game();
 
 console.log(playRound(playerSelection, computerSelection));
 console.log(playerScore);
