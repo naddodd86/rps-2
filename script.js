@@ -1,5 +1,3 @@
-// getComputerChoice function that will randomly return either 'Rock, Paper or Scissors'
-        
 function getComputerChoice()    {
     let randomChoice = Math.floor(Math.random() * 3 );
     
@@ -30,36 +28,58 @@ function game() {
         if (playerSelection !== 'rock' && playerSelection !== 'paper' && playerSelection !== 'scissors') {
             computerScore += 0;
             playerScore += 0;
+            console.log('Player Score: '+ playerScore);
+            console.log('Computer Score: '+ computerScore);
             return console.log('Invalid Selection, choose again.');
 
             } else if ( playerSelection == computerSelection) {
                 computerScore += 0;
                 playerScore += 0;
+                console.log('Player Score: '+ playerScore);
+                console.log('Computer Score: '+ computerScore);
                 return console.log('It\'s a draw!');
             } else if (playerSelection === 'rock' && computerSelection === 'scissors')  {
                 ++playerScore;
+                console.log('Player Score: '+ playerScore);
+                console.log('Computer Score: '+ computerScore);
                 return console.log('You win! Rock beats Scissors.');
             } else if (playerSelection === 'rock' && computerSelection === 'paper')  {
                 ++computerScore;
+                console.log('Player Score: '+ playerScore);
+                console.log('Computer Score: '+ computerScore);
                 return console.log('You lose! Paper beats Rock.');
             } else if (playerSelection === 'paper' && computerSelection === 'rock')  {
                 ++computerScore;
+                console.log('Player Score: '+ playerScore);
+                console.log('Computer Score: '+ computerScore);
                 return console.log('You lose! Rock beats Paper.');            
             } else if (playerSelection === 'paper' && computerSelection === 'scissors') {
                 ++computerScore;
+                console.log('Player Score: '+ playerScore);
+                console.log('Computer Score: '+ computerScore);
                 return console.log('You lose! Scissors beat Paper.');
             } else if (playerSelection === 'scissors' && computerSelection === 'paper') {
                 ++playerScore;
+                console.log('Player Score: '+ playerScore);
+                console.log('Computer Score: '+ computerScore);
                 return console.log('You win! Scissors beats Paper');
             }
-            
-            
+        gameWin();    
+         
     }
+    
 }
 
-        game();
-        //console.log(winGame());
-        console.log('Player Score: '+ playerScore);
-        console.log('Computer Score: '+ computerScore);
+function gameWin()  {
+    if (playerScore == 3)   {
+    return console.log('You WIN!');
+    }  else if (computerScore == 3)    {
+    return console.log('You LOSE!');
+    }
+}
+game();
+        
+        
+        
 
 
